@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Jellyfish here.
+ * dolphin's food.
  * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+ * @author Levi
+ * @version (a version number or a date)June 2024
+   */
 public class Jellyfish extends Actor
 {
     /**
@@ -15,5 +15,17 @@ public class Jellyfish extends Actor
     public void act()
     {
         // Add your action code here.
+        int x = getX();
+        int y = getY() + 2;
+        setLocation(x, y);
+        
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
+        
+        
     }
 }
