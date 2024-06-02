@@ -22,7 +22,7 @@ public class MyWorld extends World
         
         //create object
         Dolphin dolphin = new Dolphin();
-        addObject(dolphin, 300, 200);
+        addObject(dolphin, 300, 350);
         
         //create a label
         scoreLabel = new Label(0, 80);

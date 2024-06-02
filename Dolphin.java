@@ -8,20 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Dolphin extends Actor
 {
-    /**
-     * Act - do whatever the Dolphin wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GreenfootSound dolphinSound = new GreenfootSound("dolphinsound.mp3");
+    
+    
     public void act()
     {
         // Add your action code here.
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-1);
+            move(-3);
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(1);
+            move(3);
         }
         
         // Remove jellyfish if dolphin eats it
@@ -40,6 +39,7 @@ public class Dolphin extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.spawnJellyfish();
             world.increaseScore();
+            dolphinSound.play();
         }
         
     }
