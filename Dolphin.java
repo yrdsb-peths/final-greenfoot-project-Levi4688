@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Dolphin extends Actor
 {
-    GreenfootSound dolphinSound = new GreenfootSound("dolphinsound.mp3");
+    GreenfootSound dolphinSound = new GreenfootSound("dolphineating2.mp3");
     
     
     public void act()
